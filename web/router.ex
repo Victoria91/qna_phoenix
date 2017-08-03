@@ -16,6 +16,8 @@ defmodule QnaPhoenix.Router do
   scope "/", QnaPhoenix do
     pipe_through :browser # Use the default browser stack
 
+    resources "/", QuestionController
+
     get "/", PageController, :index
   end
 
